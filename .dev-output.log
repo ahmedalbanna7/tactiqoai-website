@@ -1,0 +1,50 @@
+
+> tactiqoai-website@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.10:3000
+✓ Ready in 7.2s
+
+○ Compiling / ...
+ GET / 200 in 10.1s (next.js: 9.6s, application-code: 478ms)
+ GET / 200 in 248ms (next.js: 8ms, application-code: 240ms)
+ GET /icon?bf8d272040be1123 200 in 3.0s (next.js: 350ms, application-code: 2.7s)
+ GET / 200 in 165ms (next.js: 4ms, application-code: 161ms)
+ GET /icon?bf8d272040be1123 200 in 14ms (next.js: 3ms, application-code: 12ms)
+✓ Compiled in 1800ms
+ GET / 200 in 233ms (next.js: 78ms, application-code: 155ms)
+ GET / 200 in 65ms (next.js: 3ms, application-code: 62ms)
+✓ Compiled in 111ms
+ GET / 200 in 279ms (next.js: 5ms, application-code: 274ms)
+✓ Compiled in 2.8s
+ GET / 200 in 1177ms (next.js: 437ms, application-code: 739ms)
+ GET / 200 in 1177ms (next.js: 693ms, application-code: 483ms)
+ GET / 200 in 393ms (next.js: 3ms, application-code: 389ms)
+ GET / 200 in 395ms (next.js: 53ms, application-code: 342ms)
+ GET / 200 in 290ms (next.js: 4ms, application-code: 286ms)
+ GET / 200 in 290ms (next.js: 52ms, application-code: 239ms)
+ GET / 200 in 291ms (next.js: 101ms, application-code: 190ms)
+ GET / 200 in 291ms (next.js: 144ms, application-code: 146ms)
+ GET / 200 in 103ms (next.js: 3ms, application-code: 100ms)
+ GET / 200 in 415ms (next.js: 4ms, application-code: 411ms)
+ GET /icon?bf8d272040be1123 200 in 404ms (next.js: 324ms, application-code: 80ms)
+✓ Compiled in 10.9s
+ GET / 200 in 196ms (next.js: 63ms, application-code: 133ms)
+ GET / 200 in 2.8s (next.js: 1168ms, application-code: 1591ms)
+ GET / 200 in 2.8s (next.js: 1066ms, application-code: 1699ms)
+ GET / 200 in 70ms (next.js: 5ms, application-code: 65ms)
+ GET / 200 in 350ms (next.js: 204ms, application-code: 146ms)
+ GET / 200 in 662ms (next.js: 11ms, application-code: 650ms)
+ GET / 200 in 3.0s (next.js: 1131ms, application-code: 1845ms)
+ GET / 200 in 3.0s (next.js: 1081ms, application-code: 1905ms)
+ GET / 200 in 521ms (next.js: 16ms, application-code: 505ms)
+ GET /icon?bf8d272040be1123 200 in 507ms (next.js: 488ms, application-code: 19ms)
+ GET /icon?bf8d272040be1123 200 in 32ms (next.js: 9ms, application-code: 23ms)
+ GET /icon?bf8d272040be1123 200 in 13ms (next.js: 3ms, application-code: 10ms)
+✓ Compiled in 425ms
+ GET / 200 in 183ms (next.js: 4ms, application-code: 179ms)
+ GET / 200 in 1997ms (next.js: 538ms, application-code: 1459ms)
+ GET /icon?bf8d272040be1123 200 in 657ms (next.js: 110ms, application-code: 547ms)
+[?25h
