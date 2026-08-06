@@ -1,9 +1,6 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export function ExperienceShell({ children }: { children: ReactNode }) {
@@ -11,34 +8,30 @@ export function ExperienceShell({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), reduced ? 80 : 1050);
+    const timer = window.setTimeout(() => setLoading(false), reduced ? 40 : 320);
     return () => window.clearTimeout(timer);
   }, [reduced]);
 
   useEffect(() => {
-    if (reduced) return;
-    gsap.registerPlugin(ScrollTrigger);
-    const lenis = new Lenis({ duration: 1.05, smoothWheel: true, wheelMultiplier: 0.9 });
-    let frame = 0;
-    const raf = (time: number) => {
-      lenis.raf(time);
-      frame = requestAnimationFrame(raf);
-    };
-    frame = requestAnimationFrame(raf);
-    lenis.on("scroll", ScrollTrigger.update);
-    const context = gsap.context(() => {
-      document.querySelectorAll<HTMLElement>(".reveal").forEach((element) => {
-        gsap.fromTo(
-          element,
-          { opacity: 0, y: 34 },
-          { opacity: 1, y: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 88%", once: true } },
-        );
-      });
-    });
+    const elements = [...document.querySelectorAll<HTMLElement>(".reveal")];
+    if (reduced || !("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("reveal--visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("reveal--visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -6%", threshold: 0.04 },
+    );
+    elements.forEach((element) => observer.observe(element));
     return () => {
-      cancelAnimationFrame(frame);
-      lenis.destroy();
-      context.revert();
+      observer.disconnect();
     };
   }, [reduced]);
 
