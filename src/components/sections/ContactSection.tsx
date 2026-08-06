@@ -39,6 +39,7 @@ export function ContactSection() {
           <h2>Your Business Already Has the Knowledge. <em>We Build the Intelligence.</em></h2>
           <p>Let&apos;s build an intelligent system that understands your information, supports your people, coordinates work, automates processes, and grows with your organization.</p>
           <a href={`mailto:${siteConfig.email}`}><Mail size={18} />Talk to TactiqoAI<ArrowUpRight size={17} /></a>
+          <a className="contact__email-address" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
         </div>
         <form className="contact-form reveal" onSubmit={submit} noValidate>
           <div className="contact-form__row">
