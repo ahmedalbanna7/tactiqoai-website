@@ -25,6 +25,7 @@ export function Footer() {
       </div>
       <div className="container footer__bottom">
         <p>TactiqoAI — Engineering Intelligent Systems.</p>
+        <a className="footer__bottom-email" href={`mailto:${siteConfig.email}`}>Contact: {siteConfig.email}</a>
         <p>Beyond Software. Into Intelligence.</p>
       </div>
     </footer>
